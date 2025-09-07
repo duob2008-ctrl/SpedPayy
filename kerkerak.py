@@ -322,12 +322,12 @@ def handle_messages(message):
                 return bot.send_message(cid, "❌ Karta raqami 16 raqamdan iborat bo'lishi kerak!")
             data['card'] = text
             return bot.send_message(cid, "💰 To'ldirish summasini kiriting:\n\n"
-                                         "📋 Min: 20000 so'm\n📋 Max: 3,000,000 so'm")
+                                         "📋 Min: 25000 so'm\n📋 Max: 3,000,000 so'm")
         
         elif 'summa' not in data:
             try:
                 summa = int(text)
-                if not 20000 <= summa <= 3000000:
+                if not 25000 <= summa <= 3000000:
                     return bot.send_message(cid, "❌ Summa 3600 dan 3,000,000 so'm oralig'ida bo'lishi kerak!")
                 
                 # Random qo'shimcha
